@@ -1,0 +1,41 @@
+<html>
+<head>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#11").mouseover(function(){
+    $("#111").show();
+    $("#111").mouseover(function(){
+      $("#111").show();
+      $("#1111").show();
+      $("#1111").mouseover(function(){
+        $("#111").show();
+        $("#1111").show();
+      });
+    });
+  })
+  .mouseout(function(){
+    $("#111").hide();
+    $("#111").mouseleave(function(){
+      $("#111").hide();
+      $("#1111").hide();
+      $("#1111").mouseleave(function(){
+        $("#111").hide();
+        $("#1111").hide();
+      });
+    });
+  });
+});
+</script>
+</head>
+<body>
+  <div style="background-color:red" id="11">1</div>
+  <div style="background-color:green" id="111" style="display: none;">2</div>
+  <div style="background-color:yellow" id="1111" style="display: none;">3
+    <a href="#">1213</a>
+  </div>
+</body>
+</html>
+
+
+
